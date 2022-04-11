@@ -20,5 +20,5 @@ Returns the dataset with a new variable
 Title
 }
 \examples{
-create_dummy(breathlessness, c("Breathlessness", vaers_2018))
+create_dummy("breathlessness", c("Breathlessness"), vaers_2018))
 }

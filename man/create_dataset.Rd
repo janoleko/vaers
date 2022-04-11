@@ -4,7 +4,7 @@
 \alias{create_dataset}
 \title{Title}
 \usage{
-create_dataset(vaxname, data = vaers_2021)
+create_dataset(vaxname, data = vaers_2020)
 }
 \arguments{
 \item{vaxname}{Name of the vaccine you want to filter for}
