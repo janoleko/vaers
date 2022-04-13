@@ -4,7 +4,7 @@
 \alias{create_dataset}
 \title{Title}
 \usage{
-create_dataset(vaxname, data = vaers_2020)
+create_dataset(.data = vaers_2020, vaxname)
 }
 \arguments{
 \item{vaxname}{Name of the vaccine you want to filter for}
@@ -18,5 +18,5 @@ Returns the filtered dataset with a new column order.
 Title
 }
 \examples{
-create_dataset("COVID19 (COVID19 (JANSSEN))", vaers_2017)
+create_dataset(vaers_2021, "COVID19 (COVID19 (JANSSEN))")
 }

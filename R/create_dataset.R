@@ -8,7 +8,7 @@
 #'
 #' @examples create_dataset(vaers_2021, "COVID19 (COVID19 (JANSSEN))")
 
-create_dataset = function(.data, vaxname){
+create_dataset = function(.data = vaers_2020, vaxname){
   .data = .data %>%
            dplyr::filter(vax_name==vaxname, numdays <= 365, numdays > 0) %>%
            dplyr::select(vaers_id,vax_type,vax_manu,vax_name,numdays, 53:dim(.data)[2], everything())

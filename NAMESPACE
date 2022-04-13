@@ -3,5 +3,4 @@
 export("%>%")
 export(create_dataset)
 export(create_dummy)
-export(hello)
 importFrom(magrittr,"%>%")

@@ -4,7 +4,7 @@
 \alias{create_dummy}
 \title{Title}
 \usage{
-create_dummy(name = "newdummy", symptoms, data = vaers_2021)
+create_dummy(.data = vaers_2020, name = "newdummy", symptoms)
 }
 \arguments{
 \item{name}{The name the new variable should have}
@@ -20,5 +20,5 @@ Returns the dataset with a new variable
 Title
 }
 \examples{
-create_dummy("breathlessness", c("Breathlessness"), vaers_2018))
+create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))
 }

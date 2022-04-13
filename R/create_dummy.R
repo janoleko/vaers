@@ -7,10 +7,10 @@
 #' @return Returns the dataset with a new variable
 #' @export
 #'
-#' @examples create_dummy("breathlessness", c("Breathlessness"), vaers_2018))
+#' @examples create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))
 
 
-create_dummy = function(name = "newdummy", symptoms, .data = vaers_2020){
+create_dummy = function(.data = vaers_2020, name = "newdummy", symptoms){
   string = paste0("[", toupper(substr(symptoms[1],1,1)), tolower(substr(symptoms[1],1,1)), "]", substr(symptoms[1],2,nchar(symptoms[1])))
 
   for (i in 2:length(vector)){
