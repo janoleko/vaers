@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_dummy.R
 \name{create_dummy}
 \alias{create_dummy}
-\title{Title}
+\title{Creating a new dummy-variable}
 \usage{
 create_dummy(.data = vaers_2020, name = "newdummy", symptoms)
 }
@@ -17,7 +17,7 @@ create_dummy(.data = vaers_2020, name = "newdummy", symptoms)
 Returns the input dataset with a new dummy-variable attached
 }
 \description{
-Title
+Creating a new dummy-variable
 }
 \examples{
 create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))

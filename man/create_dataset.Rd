@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_dataset.R
 \name{create_dataset}
 \alias{create_dataset}
-\title{Title}
+\title{Filtering and rearranging the dataset}
 \usage{
 create_dataset(.data = vaers_2020, vaxname = "ZOSTER (SHINGRIX)")
 }
@@ -15,7 +15,7 @@ create_dataset(.data = vaers_2020, vaxname = "ZOSTER (SHINGRIX)")
 Returns the filtered dataset with a new column order.
 }
 \description{
-Title
+Filtering and rearranging the dataset
 }
 \examples{
 create_dataset(vaers_2020, "COVID19 (COVID19 (JANSSEN))")
