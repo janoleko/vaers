@@ -1,4 +1,4 @@
-#' create_dummy()
+#' Creating a new dummy-variable
 #'
 #' @param .data A dataset from the vaers datasets in this package (named "vaers_20xx")
 #' @param name The name the new variable should have

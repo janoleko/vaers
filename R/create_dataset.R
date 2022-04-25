@@ -1,4 +1,4 @@
-#' create_dataset()
+#' Filtering and rearranging the dataset
 #'
 #' @param .data One of the vaers datasets or the output of the create_dummy function from this package
 #' @param vaxname Name of the vaccine you want to filter for. Please use: sort(table(vaers_20xx$vax_name), decreasing =T) to get a list of the vaccines
