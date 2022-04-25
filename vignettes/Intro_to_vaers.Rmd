@@ -1,0 +1,53 @@
+---
+title: "Introduction to the vaers package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to the vaers package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(vaers)
+```
+
+This gives a brief introduction into the vaers package.
+
+## Datasets
+
+This package includes the datasets: vaers_2010, vaers_2011, ..., vaers_2020.
+
+These datasets stem from the "Vaccine Adverse Event Reporting System (VAERS)" and contain information about different vaccinations and the corresponding adverse events.
+
+## Functions
+
+This package also contains to functions which makes the preprocessing of the vaers data easier:
+
+### create_dummy()
+
+This functions searches for given keywords in the columns symptom1 - symptom5 (using regEx) and creates a dummy variable for a specific symptom.
+
+```{r}
+newdata = create_dummy(.data = vaers_2020, name = "headache", symptoms = c("Headache"))
+head(newdata)
+```
+
+
+### create_dataset()
+
+This function takes a vaers dataset or a dataset from the output of the create_dummy() function filters for a specific vaccine name and reorders the columns of the dataframe.
+
+```{r}
+newdata = create_dataset(.data = vaers_2020, vaxname = "COVID19 (COVID19 (JANSSEN))")
+head(newdata)
+```
+
+
+
