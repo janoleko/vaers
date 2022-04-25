@@ -7,18 +7,19 @@
 create_dummy(.data = vaers_2020, name = "newdummy", symptoms)
 }
 \arguments{
+\item{.data}{A dataset from the vaers datasets in this package (named "vaers_20xx")}
+
 \item{name}{The name the new variable should have}
 
 \item{symptoms}{A vector of strings (symptoms) for which the function should search}
-
-\item{data}{A dataset from the vaers datasets in this package}
 }
 \value{
-Returns the dataset with a new variable
+Returns the input dataset with a new dummy-variable attached
 }
 \description{
 Title
 }
 \examples{
 create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))
+vaers_2020 \%>\% create_dummy("fatigue", c("Fatigue", "Lethargy", "Somnolence", "Asthenia", "Hypersomnia", "Depressed level of consciousness"))
 }
