@@ -1,13 +1,14 @@
 #' Title
 #'
+#' @param .data A dataset from the vaers datasets in this package (named "vaers_20xx")
 #' @param name The name the new variable should have
 #' @param symptoms A vector of strings (symptoms) for which the function should search
-#' @param data A dataset from the vaers datasets in this package
 #'
-#' @return Returns the dataset with a new variable
+#' @return Returns the input dataset with a new dummy-variable attached
 #' @export
 #'
 #' @examples create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))
+#' @examples vaers_2020 %>% create_dummy("fatigue", c("Fatigue", "Lethargy", "Somnolence", "Asthenia", "Hypersomnia", "Depressed level of consciousness"))
 
 
 create_dummy = function(.data = vaers_2020, name = "newdummy", symptoms){
