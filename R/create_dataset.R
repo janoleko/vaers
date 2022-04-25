@@ -15,3 +15,4 @@ create_dataset = function(.data = vaers_2020, vaxname){
           dplyr::select(-symptomversion5)
   return(.data)
 }
+
