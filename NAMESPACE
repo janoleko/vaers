@@ -3,4 +3,6 @@
 export("%>%")
 export(create_dataset)
 export(create_dummy)
+export(max_likelihood)
+export(show_vaccines)
 importFrom(magrittr,"%>%")

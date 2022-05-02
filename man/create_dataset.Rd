@@ -4,12 +4,12 @@
 \alias{create_dataset}
 \title{Filtering and rearranging the dataset}
 \usage{
-create_dataset(.data = vaers_2020, vaxname = "ZOSTER (SHINGRIX)")
+create_dataset(data = vaers_2020, vaxname = "ZOSTER (SHINGRIX)")
 }
 \arguments{
-\item{.data}{One of the vaers datasets or the output of the create_dummy function from this package}
+\item{data}{One of the vaers datasets or the output of the create_dummy function from this package}
 
-\item{vaxname}{Name of the vaccine you want to filter for. Please use: sort(table(vaers_20xx$vax_name), decreasing =T) to get a list of the vaccines}
+\item{vaxname}{Name of the vaccine you want to filter for. Please use show_vaccines(data = vaers_20xx) to get a sorted list of the vaccine names.}
 }
 \value{
 Returns the filtered dataset with a new column order.
@@ -19,7 +19,7 @@ Filtering and rearranging the dataset
 }
 \examples{
 create_dataset(vaers_2020, "COVID19 (COVID19 (JANSSEN))")
-create_dataset(.data = vaers_2020, vaxname = "COVID19 (COVID19 (JANSSEN))")
+create_dataset(data = vaers_2020, vaxname = "COVID19 (COVID19 (JANSSEN))")
 vaers_2020 \%>\% create_dataset(vaxname = "COVID19 (COVID19 (JANSSEN))")
 vaers_2018 \%>\% create_dummy("headache", c("Headache")) \%>\% create_dataset("ZOSTER (SHINGRIX)")
 vaers_2018 \%>\% create_dummy("headache", c("Headache")) \%>\% create_dummy("breathlessness", c("Breathlessness")) \%>\%  create_dataset("ZOSTER (SHINGRIX)")

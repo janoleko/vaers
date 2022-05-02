@@ -4,10 +4,10 @@
 \alias{create_dummy}
 \title{Creating a new dummy-variable}
 \usage{
-create_dummy(.data = vaers_2020, name = "newdummy", symptoms)
+create_dummy(data = vaers_2020, name = "newdummy", symptoms)
 }
 \arguments{
-\item{.data}{A dataset from the vaers datasets in this package (named "vaers_20xx")}
+\item{data}{A dataset from the vaers datasets in this package (named "vaers_20xx")}
 
 \item{name}{The name the new variable should have}
 
@@ -21,5 +21,6 @@ Creating a new dummy-variable
 }
 \examples{
 create_dummy(vaers_2018, "breathlessness", c("Breathlessness"))
+create_dummy(data = vaers_2018, name = "breathlessness", symptoms = c("Breathlessness"))
 vaers_2020 \%>\% create_dummy("fatigue", c("Fatigue", "Lethargy", "Somnolence", "Asthenia", "Hypersomnia", "Depressed level of consciousness"))
 }
