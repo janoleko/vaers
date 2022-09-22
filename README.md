@@ -1,3 +1,3 @@
 # vaers
 
-R Package for data preperation of the VAERS dataset. Main functionality is to convert symptom strings into dummy variables.
+R Package for data preparation of the VAERS dataset. Main functionality is to convert symptom strings into dummy variables.
